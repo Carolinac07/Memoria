@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f1e7;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    color: #7a4b27;
+}
+.informacion {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.tablero {
+    width: 500px;
+    max-width: 90%;
+    margin: 20px auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.carta {
+    height: 120px;
+    border: none;
+    border-radius: 10px;
+    background-color: #d9a066;
+    cursor: pointer;
+    padding: 5px;
+}
+.carta:hover {
+    transform: scale(1.03);
+}
+.carta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.oculta {
+    display: none;
+}
+button {
+    background-color: #7a4b27;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #5c371d;
+}
+#mensaje {
+    font-size: 20px;
+    font-weight: bold;
+}
+.carta .logo-carta {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+@media (max-width: 600px) {
+
+    .tablero {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .carta {
+        height: 80px;
+    }
+}
+
+.contenedor-juego {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+.zona-juego {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+.ranking {
+    width: 280px;
+    flex-shrink: 0;
+    padding: 22px;
+    background-color: #fff8ef;
+    color: #4a2c1a;
+    border: 1px solid #e5cdb5;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(74, 44, 26, 0.12);
+}
+.ranking h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.subtitulo-ranking {
+    text-align: center;
+    color: #8b6b55;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.ranking ol {
+    padding-left: 30px;
+    margin-bottom: 0;
+}
+.ranking li {
+    padding: 12px 5px;
+    border-bottom: 1px solid #ead9c8;
+    overflow-wrap: anywhere;
+}
+.ranking li:first-child {
+    font-weight: bold;
+    color: #8b4f35;
+}
+.formulario-ranking {
+    margin: 20px auto;
+}
+.formulario-ranking input {
+    padding: 10px;
+    border: 1px solid #d6b99b;
+    border-radius: 6px;
+    max-width: 100%;
+}
+.formulario-ranking button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #8b4f35;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 750px) {
+    .contenedor-juego {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 12px;
+    }
+
+    .zona-juego {
+        width: 100%;
+    }
+
+    .ranking {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+}

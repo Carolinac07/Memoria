@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romero Panificados - Memoria</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Juego de Memoria</h1>
+    <div class="contenedor-juego">
+        <main class="zona-juego">
+            <div class="informacion">
+                <p>Tiempo: <span id="tiempo">60</span> segundos</p>
+                <p>Parejas: <span id="parejas">0</span> / 8</p>
+            </div>
+
+            <div id="tablero" class="tablero"></div>
+
+            <p id="mensaje"></p>
+
+            <div id="formulario-ranking" class="formulario-ranking" style="display: none;">
+                <h2>Ganaste!</h2>
+                <p>Ingresá tu nombre para guardar tu resultado.</p>
+
+                <input type="text" id="nombre-jugador" placeholder="Tu nombre" maxlength="20">
+                <button onclick="guardarResultado()">Guardar resultado</button>
+            </div>
+
+            <button onclick="reiniciarJuego()">Volver a jugar</button>
+        </main>
+
+        <aside class="ranking">
+            <h2>Ranking</h2>
+            <p class="subtitulo-ranking">Los mejores jugadores</p>
+
+            <ol id="lista-ranking"></ol>
+        </aside>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
