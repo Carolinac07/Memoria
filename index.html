@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romero Panificados - Memoria</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,30 +14,42 @@
                 <p>Tiempo: <span id="tiempo">60</span> segundos</p>
                 <p>Parejas: <span id="parejas">0</span> / 8</p>
             </div>
-
             <div id="tablero" class="tablero"></div>
-
             <p id="mensaje"></p>
-
-            <div id="formulario-ranking" class="formulario-ranking" style="display: none;">
-                <h2>Ganaste!</h2>
-                <p>Ingresá tu nombre para guardar tu resultado.</p>
-
-                <input type="text" id="nombre-jugador" placeholder="Tu nombre" maxlength="20">
-                <button onclick="guardarResultado()">Guardar resultado</button>
-            </div>
-
             <button onclick="reiniciarJuego()">Volver a jugar</button>
         </main>
-
         <aside class="ranking">
             <h2>Ranking</h2>
             <p class="subtitulo-ranking">Los mejores jugadores</p>
-
             <ol id="lista-ranking"></ol>
+            <button onclick="borrarHistorial()" class="boton-borrar">
+                Borrar historial
+            </button>
         </aside>
     </div>
-
+    <div id="ventana-juego" class="fondo-ventana">
+        <div class="ventana">
+            <div id="formulario-ranking" style="display: none">
+                <h2>Ganaste!</h2>
+                <p>Encontraste todos los productos.</p>
+                <p>Ingresá tu nombre para guardar tu resultado.</p>
+                <form id="formulario-nombre">
+                    <input type="text" id="nombre-jugador" placeholder="Tu nombre" maxlength="20" autocomplete="off">
+                    <button type="submit">Guardar resultado</button>
+                </form>
+            </div>
+            <div id="resultado-ranking" style="display: none">
+                <h2>Resultado guardado</h2>
+                <p>Así quedó el ranking de los mejores jugadores.</p>
+                <ol id="ranking-ventana"></ol>
+                <button onclick="reiniciarJuego()">Volver a jugar</button>
+            </div>
+            <div id="pantalla-derrota" style="display: none">
+                <h2>Se terminó el tiempo</h2>
+                <button onclick="reiniciarJuego()">Volver a jugar</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
